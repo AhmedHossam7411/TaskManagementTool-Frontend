@@ -10,4 +10,9 @@ import { Login } from "./login/login";
 })
 export class App {
   protected readonly title = 'Government Task Management Tool';
+
+imagePath()
+{
+  return '../assets/images/logo.png';
+}
 }

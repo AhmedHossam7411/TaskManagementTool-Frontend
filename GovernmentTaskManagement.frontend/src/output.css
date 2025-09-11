@@ -556,8 +556,4 @@ video {
 
 body {
   font-family: 'Epunda Slab', serif;
-  border: 2px solid #4cafef;
-  background: linear-gradient(to right, #fff, #f0f8ff);
-  padding: 1.5rem;
-  border-radius: 12px;
 }
