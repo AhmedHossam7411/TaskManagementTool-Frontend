@@ -1,6 +1,6 @@
 {
   "dependencies": {
     "bootstrap": "^5.3.8",
-    "tailwind": "^4.0.0"
+    "tailwind": "^3.4.9"
   }
 }
