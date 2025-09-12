@@ -1,7 +1,5 @@
-import { Component } from '@angular/core';
-import { AbstractControl, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-
-
+import { Component, inject } from '@angular/core';
+import { AbstractControl, FormControl, FormGroup, ReactiveFormsModule, Validators,} from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -9,6 +7,7 @@ import { AbstractControl, FormControl, FormGroup, ReactiveFormsModule, Validator
   templateUrl: './login.html',
   styleUrl: './login.css'
 })
+
 export class Login {
   form = new FormGroup({
     email : new FormControl('',{
@@ -32,4 +31,5 @@ export class Login {
   {
     console.log(this.form);
   }
+  
 }

@@ -1,18 +1,22 @@
-<form [formGroup]="form" class="shadow-lg">
-  <h2>Login</h2>
+<form [formGroup]="form" class="bg-gray-300 p-6 rounded-lg shadow-lg w-96 mt-24 flex justify-center">
+  <h2 class="font-bold">Login</h2>
 
-  <div class="control-row">
-    <div class="control no-margin">
-      <label for="email">Email</label>
-      <input id="email" type="email" formControlName="email"/>
+  <div class="p-2">
+    <div class="p-2">
+      <label for="email">Email </label>
+      <input id="email" type="email" formControlName="email"
+      class="rounded-lg"
+      />
     </div>
 
-    <div class="control no-margin">
-      <label for="password">Password</label>
-      <input id="password" type="password" formControlName="password"/>
+    <div class="pr-10">
+      <label for="password">Password </label>
+      <input id="password" type="password" formControlName="password"
+      class="rounded-lg"
+      />
     </div>
 
-    <button class="button">Login</button>
+    <button class=" hover:font- mt-4 mx-auto block">Login</button>
   </div>
   @if (emailIsInvalid) 
   {
