@@ -1,11 +1,35 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { AbstractControl, FormControl, FormGroup, ReactiveFormsModule, Validators,} from '@angular/forms';
 
 @Component({
   selector: 'app-register',
-  imports: [],
+  imports: [ReactiveFormsModule],
   templateUrl: './register.html',
   styleUrl: './register.css'
 })
-export class Register {
 
+export class register {
+  form = new FormGroup({
+    email : new FormControl('',{
+      validators: [Validators.required, Validators.email,],
+    }),
+    password : new FormControl('',{
+      validators: [Validators.required, Validators.minLength(6),],
+    }),
+  });
+  get emailIsInvalid(){
+    return this.form.controls.email.invalid 
+    && this.form.controls.email.touched
+    && this.form.controls.email.dirty;
+  }
+   get passwordIsInvalid(){
+    return this.form.controls.password.invalid 
+    && this.form.controls.password.touched
+    && this.form.controls.password.dirty;
+  }
+  onSubmit() 
+  {
+    console.log(this.form);
+  }
+  
 }
